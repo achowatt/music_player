@@ -7,7 +7,11 @@
 }
 
 .time-control {
-  width: 50%;
+  width: 80%;
+  max-width: 60rem;
+  @media screen and (max-width: 780px) {
+    width: 88%;
+  }
   display: flex;
   align-items: center;
   input[type="range"] {
@@ -35,6 +39,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  min-width: 14rem;
   width: 30%;
   svg {
     cursor: pointer;

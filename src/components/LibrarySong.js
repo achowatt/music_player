@@ -12,7 +12,8 @@ const LibrarySong = ({
 }) => {
   const songSelectHandler = async () => {
     await setCurrentSong(song);
-    isPlaying && audioRef.current.play();
+    setIsPlaying(true);
+    audioRef.current.play();
     //Add Active State
     const newSongs = songs.map((song) => {
       if (song.id === id) {
@@ -33,7 +34,7 @@ const LibrarySong = ({
   return (
     //GOAL: add an onClick, so that you can change the songs based on what you click
     <div
-      className={`library-song ${song.active ? "selected" : ""}`}
+      className={`library-song ${song.active && "selected"} `}
       onClick={songSelectHandler}
     >
       <img src={song.cover} alt={song.name} />

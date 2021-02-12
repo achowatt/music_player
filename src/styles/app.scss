@@ -20,6 +20,9 @@ body {
   transition: all 0.3s ease;
   &.active-library {
     margin-left: 20rem;
+    @media screen and (max-width: 780px) {
+      margin-left: 0rem;
+    }
   }
 }
 
