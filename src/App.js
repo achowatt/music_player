@@ -29,6 +29,11 @@ function App() {
     const animationPercentage = Math.round((currentTime / duration) * 100);
     setSongInfo({ ...songInfo, currentTime, duration, animationPercentage });
   };
+  const songEndHandler = async () => {
+    let currentIndex = songs.findIndex((song) => song.id == currentSong.id);
+    await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
+    if (isPlaying) audioRef.current.play();
+  };
   return (
     <div className={`App ${libraryStatus ? "active-library" : ""}`}>
       <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
@@ -60,6 +65,7 @@ function App() {
         onLoadedMetadata={timeUpdateHandler}
         ref={audioRef}
         src={currentSong.audio}
+        onEnded={songEndHandler}
       ></audio>
     </div>
   );

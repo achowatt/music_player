@@ -1,5 +1,4 @@
 import React from "react";
-import { playSong } from "../util";
 
 const LibrarySong = ({
   song,
@@ -9,10 +8,11 @@ const LibrarySong = ({
   setCurrentSong,
   audioRef,
   setIsPlaying,
+  isPlaying,
 }) => {
-  const songSelectHandler = () => {
-    setCurrentSong(song);
-    playSong(setIsPlaying, audioRef);
+  const songSelectHandler = async () => {
+    await setCurrentSong(song);
+    isPlaying && audioRef.current.play();
     //Add Active State
     const newSongs = songs.map((song) => {
       if (song.id === id) {
@@ -29,11 +29,6 @@ const LibrarySong = ({
     });
     setSongs(newSongs);
   };
-  //Event Handlers
-  // const playSongHandler = () => {
-  //   audioRef.current.play();
-  //   setIsPlaying(true);
-  // };
 
   return (
     //GOAL: add an onClick, so that you can change the songs based on what you click
