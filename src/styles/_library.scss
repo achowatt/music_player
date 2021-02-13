@@ -12,19 +12,29 @@
   transform: translateX(-100%);
   transition: all 0.3s ease;
   opacity: 0;
+
+  .library-heading {
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   h2 {
-    padding: 2rem;
-    min-height: 10vh;
-    background-color: rgba(255, 255, 255, 0.096);
+    padding-left: 2rem;
+  }
+  .close-library {
+    padding-right: 2rem;
+    cursor: pointer;
   }
   &.active-library {
     transform: translateX(0);
-    opacity: 1;
+    opacity: unset;
+    background: #fffffff0;
   }
 
   .library-songs {
     overflow: scroll;
-    height: 90vh;
+    height: calc(100vh - 7rem);
   }
 }
 
@@ -36,13 +46,15 @@
   img {
     width: 30%;
   }
-  &:hover {
-    background: #ffebeb;
+  @media (hover: hover) {
+    &:hover {
+      background: #ffebeb;
+    }
   }
 }
 
 .selected {
-  background: linear-gradient(to right, hsl(293, 100%, 92%), #b8c5ff);
+  background: linear-gradient(to right, #ffcffe, #afdeff);
 }
 
 .song-description {

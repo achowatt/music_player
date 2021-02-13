@@ -8,11 +8,13 @@ const Nav = ({ libraryStatus, setLibraryStatus }) => {
   };
   return (
     <nav>
-      <h1>Waves</h1>
-      <button onClick={toggleLibraryHandler}>
-        Library
-        <FontAwesomeIcon icon={faMusic} />
-      </button>
+      <div className="wrapper">
+        <h1>Little Pinky Music</h1>
+        <button onClick={toggleLibraryHandler}>
+          Library &nbsp;
+          <FontAwesomeIcon icon={faMusic} />
+        </button>
+      </div>
     </nav>
   );
 };

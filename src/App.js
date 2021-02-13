@@ -35,9 +35,9 @@ function App() {
     if (isPlaying) audioRef.current.play();
   };
   return (
-    <div className={`App ${libraryStatus ? "active-library" : ""}`}>
+    <div className={`App ${libraryStatus && "active-library"}`}>
       <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
-      <Song currentSong={currentSong} />
+      <Song currentSong={currentSong} isPlaying={isPlaying} />
       <Player
         currentSong={currentSong}
         isPlaying={isPlaying}
@@ -59,6 +59,7 @@ function App() {
         songInfo={songInfo}
         setSongs={setSongs}
         libraryStatus={libraryStatus}
+        setLibraryStatus={setLibraryStatus}
       />
       <audio
         onTimeUpdate={timeUpdateHandler}

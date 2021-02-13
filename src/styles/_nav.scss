@@ -1,8 +1,14 @@
 nav {
-  min-height: 10vh;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
+  .wrapper {
+    display: flex;
+    width: 80%;
+    max-width: 60rem;
+    justify-content: space-between;
+    align-items: center;
+    height: 7rem;
+  }
   button {
     background: transparent;
     border: none;
@@ -11,9 +17,11 @@ nav {
     padding: 0.5rem;
     transition: all 0.3s ease;
     z-index: 9;
-    &:hover {
-      background: rgb(65, 65, 65);
-      color: white;
+    @media (hover: hover) {
+      &:hover {
+        background: rgb(65, 65, 65);
+        color: white;
+      }
     }
   }
 }
