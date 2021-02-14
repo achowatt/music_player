@@ -4,7 +4,7 @@ const chillHop = [
   {
     name: "Wintertime",
     cover:
-      "https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg",
+      "https://res.cloudinary.com/djv69vvs7/image/upload/c_scale,h_550,w_550/v1613327715/zoltan-tasi-hUp58GsPKAw-unsplash_jozykv.jpg",
     artist: "Anna Chowattanakul",
     audio:
       "https://littlepinkypianist.s3.us-east-2.amazonaws.com/Wintertime.mp3",
@@ -13,51 +13,54 @@ const chillHop = [
     active: true,
   },
   {
-    name: "Daylight",
+    name: "Nardis (Miles Davis)",
     cover:
-      "https://chillhop.com/wp-content/uploads/2020/07/ef95e219a44869318b7806e9f0f794a1f9c451e4-1024x1024.jpg",
-    artist: "Aiguille",
-    audio: "https://mp3.chillhop.com/serve.php/?mp3=9272",
+      "https://res.cloudinary.com/djv69vvs7/image/upload/c_scale,h_550,w_550/v1613337699/florian-klauer-nptLmg6jqDo-unsplash_hh5rqi.jpg",
+    artist: "Arr. Anna Chowattanakul",
+    audio: "https://littlepinkypianist.s3.us-east-2.amazonaws.com/Nardis.mp3",
     color: ["#EF8EA9", "#ab417f"],
     id: uuidv4(),
     active: false,
   },
   {
-    name: "Keep Going",
+    name: "Dystopia",
     cover:
-      "https://chillhop.com/wp-content/uploads/2020/07/ff35dede32321a8aa0953809812941bcf8a6bd35-1024x1024.jpg",
-    artist: "Swørn",
-    audio: "https://mp3.chillhop.com/serve.php/?mp3=9222",
+      "https://res.cloudinary.com/djv69vvs7/image/upload/c_scale,h_550,w_550/v1613337432/orlova-maria-bU8TeXhsPcY-unsplash_zotwhn.jpg",
+    artist: "Anna Chowattanakul",
+    audio: "https://littlepinkypianist.s3.us-east-2.amazonaws.com/Dystopia.m4a",
     color: ["#CD607D", "#c94043"],
     id: uuidv4(),
     active: false,
   },
   {
-    name: "Nightfall",
+    name: "Funk Loop (GarageBand)",
     cover:
-      "https://chillhop.com/wp-content/uploads/2020/07/ef95e219a44869318b7806e9f0f794a1f9c451e4-1024x1024.jpg",
-    artist: "Aiguille",
-    audio: "https://mp3.chillhop.com/serve.php/?mp3=9148",
+      "https://res.cloudinary.com/djv69vvs7/image/upload/c_scale,h_550,w_550/v1613337432/stephane-yaich-pUV1phrNReo-unsplash_ofrosu.jpg",
+    artist: "Arr. Anna Chowattanakul",
+    audio:
+      "https://littlepinkypianist.s3.us-east-2.amazonaws.com/Funk+Loop+(GarageBand+Remix).m4a",
     color: ["#EF8EA9", "#ab417f"],
     id: uuidv4(),
     active: false,
   },
   {
-    name: "Reflection",
+    name: "Indian Loop (GarageBand)",
     cover:
-      "https://chillhop.com/wp-content/uploads/2020/07/ff35dede32321a8aa0953809812941bcf8a6bd35-1024x1024.jpg",
-    artist: "Swørn",
-    audio: "https://mp3.chillhop.com/serve.php/?mp3=9228",
+      "https://res.cloudinary.com/djv69vvs7/image/upload/c_scale,h_550,w_550/v1613337432/maryna-yazbeck-yv1is2sVAHQ-unsplash_pujbaf.jpg",
+    artist: "Arr. Anna Chowattanakul",
+    audio:
+      "https://littlepinkypianist.s3.us-east-2.amazonaws.com/Indian+loops+(GarageBand+Mix).m4a",
     color: ["#CD607D", "#c94043"],
     id: uuidv4(),
     active: false,
   },
   {
-    name: "Under the City Stars",
+    name: "10 Thousand Reasons",
     cover:
-      "https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg",
-    artist: "Aso, Middle School, Aviino",
-    audio: "https://mp3.chillhop.com/serve.php/?mp3=10074",
+      "https://res.cloudinary.com/djv69vvs7/image/upload/c_scale,h_550,w_550/v1613337433/rinck-content-studio-RTdRHgyGiiw-unsplash_p52dzf.jpg",
+    artist: "Arr. Anna Chowattanakul",
+    audio:
+      "https://littlepinkypianist.s3.us-east-2.amazonaws.com/10ThousandReasons.m4a",
     color: ["#205950", "#2ab3bf"],
     id: uuidv4(),
     active: false,
