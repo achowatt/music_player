@@ -9,7 +9,7 @@ const Nav = ({ libraryStatus, setLibraryStatus, isPlaying }) => {
   return (
     <nav>
       <div className="wrapper">
-        <h1>LittlePinky Music</h1>
+        <h1>LittlePinky</h1>
         <button
           className={`library-toggle ${isPlaying ? "is-playing" : " "}`}
           onClick={toggleLibraryHandler}

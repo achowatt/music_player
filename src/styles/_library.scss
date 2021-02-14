@@ -4,7 +4,6 @@
   left: 0;
   width: 20rem;
   height: 100%;
-  box-shadow: 2px 2px 7px #dededed1;
   transform: translateX(-100%);
   transition: all 0.3s ease;
   opacity: 0;
@@ -29,11 +28,21 @@
   &.active-library {
     transform: translateX(0);
     opacity: unset;
+    background: #a7a7a71f;
+    @media screen and (max-width: 780px) {
+      background: linear-gradient(
+        to right bottom,
+        black,
+        rgb(33, 5, 54),
+        rgb(67, 13, 75),
+        rgb(33, 5, 54),
+        black
+      );
+    }
   }
   &.isPlaying {
     box-shadow: unset;
-    background: #a7a7a71f;
-
+    background: unset;
     @media screen and (max-width: 780px) {
       background: linear-gradient(
         to right bottom,
@@ -65,7 +74,7 @@
     }
   }
   &.selected {
-    background: linear-gradient(to right, #ffcffe, #afdeff);
+    background: linear-gradient(to right, #0000003d, #9c9c9c42);
   }
   &.is-playing {
     background: linear-gradient(to right, #0000003d, #9c9c9c42);

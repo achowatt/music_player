@@ -85,13 +85,11 @@ const Player = ({
     backgroundImage: `linear-gradient(to right, ${currentSong.color[0]}, ${currentSong.color[1]})`,
   };
 
-  const controlColor = isPlaying ? "pink" : "grey";
+  const controlColor = "white";
   return (
     <div className="player">
       <div className="time-control">
-        <p className={`time ${isPlaying ? "is-playing" : ""}`}>
-          {getTime(songInfo.currentTime)}
-        </p>
+        <p className={`time`}>{getTime(songInfo.currentTime)}</p>
         <div className="track" style={trackColor}>
           <input
             min={0}
@@ -102,7 +100,7 @@ const Player = ({
           />
           <div className="animate-track" style={trackAnim}></div>
         </div>
-        <p className={`time ${isPlaying ? "is-playing" : ""}`}>
+        <p className={`time`}>
           {songInfo.duration ? getTime(songInfo.duration) : "0:00"}
         </p>
       </div>

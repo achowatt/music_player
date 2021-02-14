@@ -17,15 +17,12 @@ nav {
     padding: 0.5rem;
     transition: all 0.3s ease;
     z-index: 9;
+    color: #d6d6d6ab;
+    border: 2px solid #ffffff47;
     @media (hover: hover) {
       &:hover {
-        background: rgb(65, 65, 65);
-        color: white;
+        background: #ffffff20;
       }
-    }
-    &.is-playing {
-      color: white;
-      border: 2px solid whitesmoke;
     }
   }
 }
