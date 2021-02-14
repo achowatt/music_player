@@ -15,7 +15,7 @@ const chillHop = [
   {
     name: "Nardis (Miles Davis)",
     cover:
-      "https://res.cloudinary.com/djv69vvs7/image/upload/c_scale,h_550,w_550/v1613337699/florian-klauer-nptLmg6jqDo-unsplash_hh5rqi.jpg",
+      "https://res.cloudinary.com/djv69vvs7/image/upload/c_scale,h_550,w_550/v1613337432/ryan-quintal-_H7p-RZUVo4-unsplash_dnevts.jpg",
     artist: "Arr. Anna Chowattanakul",
     audio: "https://littlepinkypianist.s3.us-east-2.amazonaws.com/Nardis.mp3",
     color: ["#EF8EA9", "#ab417f"],
