@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import "./styles/app.scss";
 import data from "./data";
+import Particles from "react-particles-js";
 
 //Adding components
 import Player from "./components/Player";
@@ -35,8 +36,16 @@ function App() {
     if (isPlaying) audioRef.current.play();
   };
   return (
-    <div className={`App ${libraryStatus && "active-library"}`}>
-      <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
+    <div
+      className={`App ${libraryStatus ? "active-library" : ""} ${
+        isPlaying ? "is-playing" : ""
+      }`}
+    >
+      <Nav
+        libraryStatus={libraryStatus}
+        setLibraryStatus={setLibraryStatus}
+        isPlaying={isPlaying}
+      />
       <Song currentSong={currentSong} isPlaying={isPlaying} />
       <Player
         currentSong={currentSong}
@@ -68,6 +77,37 @@ function App() {
         src={currentSong.audio}
         onEnded={songEndHandler}
       ></audio>
+      {isPlaying && (
+        <Particles
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            pointerEvents: "none",
+            zIndex: "-1",
+            background:
+              "linear-gradient(to right bottom, black, rgb(33, 5, 54), rgb(67, 13, 75), rgb(33, 5, 54), black)",
+          }}
+          height="100%"
+          width="100%"
+          params={{
+            particles: {
+              color: {
+                value: "#ffcfe057",
+              },
+              line_linked: {
+                enable: false,
+              },
+              number: {
+                value: 50,
+              },
+              size: {
+                value: 3,
+              },
+            },
+          }}
+        />
+      )}
     </div>
   );
 }

@@ -6,6 +6,12 @@
   justify-content: space-between;
 }
 
+.time {
+  &.is-playing {
+    color: white;
+  }
+}
+
 .time-control {
   width: 80%;
   max-width: 60rem;

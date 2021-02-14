@@ -23,5 +23,9 @@ nav {
         color: white;
       }
     }
+    &.is-playing {
+      color: white;
+      border: 2px solid whitesmoke;
+    }
   }
 }

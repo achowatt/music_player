@@ -24,6 +24,21 @@ body {
       margin-left: 0rem;
     }
   }
+  &.is-playing {
+    h1 {
+      color: pink;
+    }
+    h2 {
+      color: white;
+    }
+    h3 {
+      color: #ffffff91;
+    }
+    h4 {
+      color: #c5c5c569;
+      font-size: 0.7rem;
+    }
+  }
 }
 
 @import "./library";

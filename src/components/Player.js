@@ -85,10 +85,13 @@ const Player = ({
     backgroundImage: `linear-gradient(to right, ${currentSong.color[0]}, ${currentSong.color[1]})`,
   };
 
+  const controlColor = isPlaying ? "pink" : "grey";
   return (
     <div className="player">
       <div className="time-control">
-        <p>{getTime(songInfo.currentTime)}</p>
+        <p className={`time ${isPlaying ? "is-playing" : ""}`}>
+          {getTime(songInfo.currentTime)}
+        </p>
         <div className="track" style={trackColor}>
           <input
             min={0}
@@ -99,22 +102,27 @@ const Player = ({
           />
           <div className="animate-track" style={trackAnim}></div>
         </div>
-        <p>{songInfo.duration ? getTime(songInfo.duration) : "0:00"}</p>
+        <p className={`time ${isPlaying ? "is-playing" : ""}`}>
+          {songInfo.duration ? getTime(songInfo.duration) : "0:00"}
+        </p>
       </div>
       <div className="play-control">
         <FontAwesomeIcon
+          color={controlColor}
           className="skip-back"
           size="2x"
           icon={faAngleLeft}
           onClick={() => skipTrackHandler("skip-back")}
         ></FontAwesomeIcon>
         <FontAwesomeIcon
+          color={controlColor}
           onClick={playSongHandler}
           className="play"
           size="2x"
           icon={isPlaying ? faPause : faPlay}
         ></FontAwesomeIcon>
         <FontAwesomeIcon
+          color={controlColor}
           className="skip-forward"
           size="2x"
           icon={faAngleRight}

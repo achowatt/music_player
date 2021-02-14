@@ -34,7 +34,9 @@ const LibrarySong = ({
   return (
     //GOAL: add an onClick, so that you can change the songs based on what you click
     <div
-      className={`library-song ${song.active && "selected"} `}
+      className={`library-song ${
+        isPlaying && song.active ? "is-playing" : song.active ? "selected" : ""
+      }`}
       onClick={songSelectHandler}
     >
       <img src={song.cover} alt={song.name} />
