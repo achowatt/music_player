@@ -8,7 +8,7 @@ const chillHop = [
     artist: "Anna Chowattanakul",
     audio:
       "https://littlepinkypianist.s3.us-east-2.amazonaws.com/Wintertime.mp3",
-    color: ["#205950", "#2ab3bf"],
+    color: ["#EF8EA9", "#ab417f"],
     id: uuidv4(),
     active: true,
   },
@@ -61,7 +61,7 @@ const chillHop = [
     artist: "Arr. Anna Chowattanakul",
     audio:
       "https://littlepinkypianist.s3.us-east-2.amazonaws.com/10ThousandReasons.m4a",
-    color: ["#205950", "#2ab3bf"],
+    color: ["#EF8EA9", "#ab417f"],
     id: uuidv4(),
     active: false,
   },
