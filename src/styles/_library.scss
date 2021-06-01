@@ -56,7 +56,8 @@
     }
   }
   .library-songs {
-    overflow: scroll;
+    overflow: auto;
+    overscroll-behavior: contain;
     height: calc(100vh - 7rem);
   }
 }
