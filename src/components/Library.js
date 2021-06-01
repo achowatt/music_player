@@ -9,7 +9,11 @@ const Library = ({
   setIsPlaying,
   isPlaying,
   libraryStatus,
+  setLibraryStatus,
 }) => {
+  const toggleLibraryHandler = () => {
+    setLibraryStatus(!libraryStatus);
+  };
   return (
     <div
       className={`library ${libraryStatus ? "active-library" : ""} ${
@@ -18,6 +22,7 @@ const Library = ({
     >
       <div className="library-heading">
         <h2>Music Library</h2>
+        <button onClick={() => toggleLibraryHandler()}>X</button>
       </div>
       <div className="library-songs">
         {songs.map((song) => (
